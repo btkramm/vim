@@ -12,15 +12,12 @@ fi
 
 autoload -Uz promptinit
 promptinit
-prompt agnoster
+prompt cloud
 
 # Ruby on Rails
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
-
-# Vivado
-# source /opt/Xilinx/Vivado/2016.2/settings64.sh
 
 # Terminal
 export TERM=xterm-256color
