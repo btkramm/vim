@@ -115,12 +115,8 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# Ruby on Rails
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
-# Terminal
-export TERM=xterm-256color

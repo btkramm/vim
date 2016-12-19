@@ -1,3 +1,6 @@
+" Título
+set title
+
 " Número de fila
 set relativenumber
 
@@ -10,6 +13,9 @@ colorscheme monokai
 set t_Co=256
 let &colorcolumn=81
 hi ColorColumn guibg=#2d2d2d ctermbg=246
+
+" Línea actual destacada
+set cursorline
 
 " ¡Clic!
 set mouse=a
@@ -48,6 +54,7 @@ call plug#begin('~/.vim/plugins')
   Plug 'tpope/vim-surround'
   Plug 'takac/vim-hardtime'
   Plug 'csscomb/vim-csscomb'
+  Plug 'jelera/vim-javascript-syntax'
 call plug#end()
 
 " CtrlP
@@ -71,9 +78,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_loc_list_height=1
-let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
-nnoremap <C-w>E :SyntasticCheck<CR> :SyntasticToggleMode<CR>
+let g:syntastic_javascript_checkers = ['eslint']
 
 " Hardtime
 let g:hardtime_default_on = 0
