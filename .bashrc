@@ -116,7 +116,16 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# Color
+export TERM="xterm-256color"
+
+# Default editor
+export EDITOR=vim
+
 # Ruby on Rails
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
+
+# Jupyter
+export PATH=$PATH:~/.local/bin
