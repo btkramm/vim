@@ -97,3 +97,7 @@ export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 
 # Jupyter
 export PATH=$PATH:~/.local/bin
+
+# Alias
+alias update='sudo apt update'
+alias upgrade='sudo apt upgrade && sudo apt full-upgrade && sudo apt autoremove'
