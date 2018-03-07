@@ -116,20 +116,20 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# Color
-export TERM="xterm-256color"
-
 # Default editor
 export EDITOR=vim
+
+# Alias
+alias update='sudo apt update'
+alias upgrade='sudo apt upgrade && sudo apt full-upgrade && sudo apt autoremove'
+
+# Color
+export TERM="xterm-256color"
 
 # Ruby on Rails
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 
-# Jupyter
-export PATH=$PATH:~/.local/bin
-
-# Alias
-alias update='sudo apt update'
-alias upgrade='sudo apt upgrade && sudo apt full-upgrade && sudo apt autoremove'
+# TeX Live
+PATH=/usr/local/texlive/2017/bin/x86_64-linux:$PATH

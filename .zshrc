@@ -9,6 +9,13 @@
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="minimal"
 
+# Set list of themes to load
+# Setting this variable when ZSH_THEME=random
+# cause zsh load theme from this variable instead of
+# looking in ~/.oh-my-zsh/themes/
+# An empty array have no effect
+# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -51,7 +58,9 @@ ZSH_THEME="minimal"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+  git
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -84,20 +93,20 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Color
-export TERM="xterm-256color"
-
 # Default editor
 export EDITOR=vim
+
+# Alias
+alias update='sudo apt update'
+alias upgrade='sudo apt upgrade && sudo apt full-upgrade && sudo apt autoremove'
+
+# Color
+export TERM="xterm-256color"
 
 # Ruby on Rails
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 
-# Jupyter
-export PATH=$PATH:~/.local/bin
-
-# Alias
-alias update='sudo apt update'
-alias upgrade='sudo apt upgrade && sudo apt full-upgrade && sudo apt autoremove'
+# TeX Live
+PATH=/usr/local/texlive/2017/bin/x86_64-linux:$PATH
