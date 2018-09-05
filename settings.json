@@ -1,0 +1,19 @@
+{
+    "csscomb.preset": "yandex",
+
+    "editor.lineNumbers": "relative",
+    "editor.tabSize": 2,
+
+    "files.insertFinalNewline": true,
+    "prettier.singleQuote": true,
+
+    "prettier.trailingComma": "es5",
+    "workbench.colorTheme": "Monokai",
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.activityBar.visible": false,
+
+    // "editor.wordWrap": "bounded",
+    "window.zoomLevel": 0,
+    "latex-workshop.view.pdf.viewer": "tab",
+    "terminal.integrated.rendererType": "dom",
+}
